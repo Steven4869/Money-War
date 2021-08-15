@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1 style="text-align: center; color: wheat;">Add your product</h1>
+<div class="create">
+    
+    <div class="section-form">
+        <form action="/add" method="post">
+            <div class="intro">
+                <h2>Please fill up the details</h2>
+                <input type="text" name="name" id="" placeholder="Please enter the product's name">
+                <input type="text" name="price" id="" placeholder="Please enter the product's asking price">
+                <input type="text" name="image" id="" placeholder="Please enter the product's image link adress">
+                <input type="text" name="conditions" id="" placeholder="Please enter the product's condition">
+                <textarea name="description" id="" cols="15" rows="10" placeholder="Please enter the description of the product"></textarea>
+                <input type="submit" value="Add">
+    </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

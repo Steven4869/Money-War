@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+    <h1 style="text-align: center; color: wheat;">Home</h1>
+    <br>
+    {% for rows in data %}
+
+    <div class="grid-container">
+        <div class="grid-item grid-item-1">
+            <img src="{{rows[3]}}"
+                alt="image" style="height: 150px; width: 200px; display: block; margin: 0 auto;">
+            <h3>{{rows[1]}}</h3>
+            <h2>Price: {{rows[2]}}</h2>
+            <p style="font-weight: bold;">Description: <br>
+                {{rows[5]}}
+            </p>
+            <p style="font-weight: bold;">Condition: <br>
+                {{rows[4]}}</p>
+        </div>
+    {% endfor %}
+
+    </div>
+    {% endblock %}

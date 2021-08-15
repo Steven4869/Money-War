@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2 style="text-align: center; color: wheat;">Products</h2>
+<a href="/create" style="margin-left: 670px; font-size: 25px; text-decoration: none; color: white; cursor: pointer; 
+border-bottom: 2px solid wheat; text-align: center;"> Add your product</a>
+<br>
+<br>
+{% for row in items %}
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Desciption</th>
+            <th>Condition</th>
+            <th>Image Link</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="active-row">
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[3]}}</td>
+            <form action="/edit/{{row[0]}}">
+            <td><input type="submit" value="Edit"></td>
+            </form>
+            <form action="/delete/{{row[0]}}">
+                <td><input type="submit" value="Delete"></td>
+                </form>
+        </tr>
+    </tbody>
+</table>
+{% endfor %}
+{% endblock %}

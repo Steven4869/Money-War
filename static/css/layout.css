@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+body{
+    margin: 0;
+    background: #24252A;
+}
+li, a ,button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.navlinks{
+    list-style: none;
+}
+li{
+    display: inline-block;
+    padding: 0px 20px;
+    }
+a{
+    transition: all 0.3s ease 0s;
+        }
+a:hover{
+                color: #0088A9;
+            }
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,135,169,1);
+    border:none;
+    border-radius: 5em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+        background-color: rgba(0,135,169,0.8);
+    }
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(250px, auto);
+    justify-content: start;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.grid-item{
+    background-color: white;
+    border: 2px solid wheat;
+}
+.section-form {
+    width: 48em;
+    margin: 3em auto;
+    background-color: #f3efe7;
+    padding: 2em;
+}
+    
+    .intro {
+      margin-bottom: 2em;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 1.6em;
+      margin-bottom: 0.6em;
+    }
+  
+  input[type=text] {
+    height: 45px; 
+  }
+  
+  input[type=text], textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 20px;
+    color: #cfcece;
+    font-weight: 300;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #555555;
+    font-weight: 300;
+  }
+  
+  input[type=button] {
+    cursor: pointer;
+    margin: 0;
+    padding: .5em 2em;
+    background: #636363;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
