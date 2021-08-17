@@ -28,8 +28,8 @@ def products():
 @app.route('/profile')
 def profile():
     if 'user_id' in session:
-        cursor.execute("""SELECT * FROM `data` WHERE id = '%s'""", (session['user_id']))
-        profiles = cursor.fetchone()
+        cursor.execute("""SELECT * FROM `data`""")
+        profiles = cursor.fetchall()
         return render_template('profile.html', profiles=profiles)
     return redirect('/')
 @app.route('/home')
@@ -40,8 +40,8 @@ def dashboard():
         return render_template('index.html', data= data)
     else:
         return redirect('/')
-@app.route('/edit')
-def edit():
+@app.route('/edit<int:id>')
+def edit(id):
     return render_template('edit.html')
 @app.route('/add', methods=['POST'])
 def add():

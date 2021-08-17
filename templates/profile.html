@@ -3,7 +3,11 @@
 <div class="container">
     <h3 style="text-align: center; color: wheat;">Profile</h3>
     <br>
-    <h3 style="text-align: center; color: wheat;">Welcome {{ profiles['name'] }}</h3>
+    {% for rows in profiles %}
+        {% if loop.index ==1 %}
+            <h3 style="text-align: center; color: wheat;">Welcome {{rows[1]}}</h3>
+        {% endif %}
+    {% endfor %}
     
 </div>
 {% endblock %}
