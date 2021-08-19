@@ -27,10 +27,10 @@ border-bottom: 2px solid wheat; text-align: center;"> Add your product</a>
             <td>{{row[4]}}</td>
             <td>{{row[3]}}</td>
             <form action="/edit/{{row[0]}}">
-            <td><input type="submit" value="Edit"></td>
+            <td><input style="text-decoration: none; background-color: gray;font-size: 15px; color:wheat; border-radius:5px; cursor: pointer;" type="submit" value="Edit"></td>
             </form>
             <form action="/delete/{{row[0]}}">
-                <td><input type="submit" value="Delete"></td>
+                <td><input style="text-decoration: none; background-color: gray;font-size: 15px; color:wheat; border-radius:5px; cursor: pointer;" type="submit" value="Delete"></td>
                 </form>
         </tr>
     </tbody>

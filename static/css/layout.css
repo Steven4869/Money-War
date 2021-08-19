@@ -131,3 +131,22 @@ button:hover{
     font-weight: bold;
     color: #009879;
 }
+.bids{
+    width: 500px;
+    margin-top: 75px;
+    margin-left: 485px;
+}
+.bids input[type=text]{
+    text-align: center;
+}
+.bids input[type=submit] {
+    cursor: pointer;
+    margin: 0;
+    padding: .5em 2em;
+    background: #636363;
+    border: none;
+    color: wheat;
+    font-size: 1em;
+    font-weight: 400;
+    border-radius: 15px;
+  }

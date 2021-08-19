@@ -4,7 +4,7 @@ import os
 conn = mysql.connector.connect(
     host='localhost',
     user='root',
-    password='',
+    password='shivamshivam',
     port='3306',
     database='login'
 )
@@ -40,6 +40,23 @@ def dashboard():
         return render_template('index.html', data= data)
     else:
         return redirect('/')
+@app.route('/bid')
+def bid():
+    return render_template('bid.html')
+@app.route('/add_bid', methods=['POST'])
+def add_bid():
+    return "Your bid has been submitted successfully"
+@app.route('/bidding')
+def bidding():
+    cursor.execute("""SELECT * FROM `posts`""")
+    bid = cursor.fetchall()
+    return render_template('bidding.html', bid=bid)
+@app.route('/delete/<string:id>', methods= ['POST', 'GET'])
+def delete(id):
+    cursor.execute("""DELETE * FROM `posts` WHERE id = %s """,[id])
+    cursor.commit()
+    return "Post deleted successfully"
+
 @app.route('/edit<int:id>')
 def edit(id):
     return render_template('edit.html')

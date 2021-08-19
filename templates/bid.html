@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3 style="text-align: center; color: wheat;"">Please place your bid</h3>
+<div class="bids">
+    <form action="/add_bid" method="post">
+            <input type="text" name="bids" id="" placeholder="Please enter your bid">
+            <input type="submit" value="Submit your bid">
+    </form>
+</div>
+
+{% endblock %}

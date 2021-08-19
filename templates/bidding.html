@@ -1,10 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
-
-<div class="container">
-    <h1 style="text-align: center; color: wheat;">Home</h1>
-    <br>
-    {% for rows in data %}
+<h2 style="text-align: center; color: wheat;">Welcome to Bidding corner</h2>
+{% for rows in bid %}
 
     <div class="grid-container">
         <div class="grid-item grid-item-1">
@@ -18,8 +15,9 @@
             <p style="font-weight: bold;">Condition: <br>
                 {{rows[4]}}</p>
             <p style="font-weight: bold;">Tag-Id: {{rows[0]}}</p>
+            <a href="/bid" class="cta"><button>Bid</button></a>
         </div>
     {% endfor %}
 
-    </div>
-    {% endblock %}
+
+{% endblock %}
