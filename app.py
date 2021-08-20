@@ -51,11 +51,11 @@ def bidding():
     cursor.execute("""SELECT * FROM `posts`""")
     bid = cursor.fetchall()
     return render_template('bidding.html', bid=bid)
-@app.route('/delete/<string:id>', methods= ['POST', 'GET'])
+@app.route('/delete/<int:id>', methods= ['POST', 'GET'])
 def delete(id):
-    cursor.execute("""DELETE * FROM `posts` WHERE id = %s """,[id])
-    cursor.commit()
-    return "Post deleted successfully"
+    cursor.execute("""DELETE * FROM `posts` WHERE id = %s""",[id])
+    conn.commit()
+    return render_template('index.html', id=id)
 
 @app.route('/edit<int:id>')
 def edit(id):
